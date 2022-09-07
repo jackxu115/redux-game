@@ -5,10 +5,12 @@ const fetchGames = () => async dispatch => {
     console.log('action')
     try {
         let res = await axios.get(`${URL}?key=${APIKEY}`)
-        console.log(res.data.results)
+        const {data:{results}} = res
+
+        console.log(results)
         dispatch({
             type: actionType.FETCH_GAMES,
-            payload: res
+            payload: results
         })
 
     } catch (error) {

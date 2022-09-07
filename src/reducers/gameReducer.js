@@ -2,7 +2,7 @@ import {actionType} from "../Helper";
 
 
 const initialState = {
-    gameList: null
+    gameList: []
 }
 
 export const gameReducer = (state = initialState, action) => {
